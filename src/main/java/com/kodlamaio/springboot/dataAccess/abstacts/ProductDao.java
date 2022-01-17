@@ -10,6 +10,8 @@ import com.kodlamaio.springboot.entities.dtos.ProductWithCategoryDto;
 
 public interface ProductDao extends JpaRepository<Product, Integer> {
 	
+	Product getById(int productId);
+	
 	Product getByProductName(String productName);
 	
 	Product getByProductNameAndCategory(String productName, int categoryId);

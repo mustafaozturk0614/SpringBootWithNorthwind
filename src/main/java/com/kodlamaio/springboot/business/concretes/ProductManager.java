@@ -121,4 +121,11 @@ public class ProductManager implements ProductService {
 				"Data listelendi");
 	}
 	
+	@Override
+	public DataResult<Product> getById(int productId) {
+		
+		return new SuccessDataResult<Product>(this.productDao.getById(productId), "Data listelendi");
+		
+	}
+	
 }
